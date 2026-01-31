@@ -1,0 +1,44 @@
+---
+interface Props {
+  id?: string;
+  image: string;
+  name: string;
+  price: number;
+  badge?: string;
+}
+
+const { image, name, price, badge, id: propId } = Astro.props;
+const id = propId ?? `${name.replace(/\s+/g, '-').toLowerCase()}-${price}`;
+---
+
+<article data-component="ProductCard" class="group bg-white rounded-2xl border border-slate-100 overflow-hidden transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 hover:border-emerald-200 hover:scale-[1.02]">
+  <div class="relative aspect-square overflow-hidden bg-slate-50 rounded-t-2xl">
+    <img
+      src={image}
+      alt={name}
+      class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+      width="400"
+      height="400"
+    />
+    {badge && (
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-semibold transition-transform duration-300 group-hover:scale-105 group-hover:shadow-md">
+        {badge}
+      </span>
+    )}
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+  </div>
+  <div class="p-5">
+    <h3 class="font-semibold text-slate-800 mb-1 transition-colors duration-300 group-hover:text-emerald-600">{name}</h3>
+    <p class="text-emerald-600 font-bold text-lg mb-4 transition-transform duration-300 group-hover:scale-105 inline-block">৳{price}</p>
+    <button
+      type="button"
+      class="add-to-cart-btn w-full py-3 rounded-xl bg-slate-100 text-slate-700 font-medium transition-all duration-300 ease-out hover:bg-emerald-500 hover:text-white hover:scale-[1.02] hover:shadow-lg hover:shadow-emerald-500/25 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-emerald-500/25"
+      data-product-id={id}
+      data-product-name={name}
+      data-product-price={price}
+      data-product-image={image}
+    >
+      Add to Cart
+    </button>
+  </div>
+</article>

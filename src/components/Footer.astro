@@ -1,0 +1,61 @@
+---
+const links = {
+  Shop: [
+    { label: 'All Products', href: '#' },
+    { label: 'New Arrivals', href: '#' },
+    { label: 'Best Sellers', href: '#' },
+    { label: 'Sale', href: '#' },
+  ],
+  Help: [
+    { label: 'Contact Us', href: '#' },
+    { label: 'Shipping Info', href: '#' },
+    { label: 'Returns & Exchanges', href: '#' },
+    { label: 'FAQ', href: '#' },
+  ],
+  Company: [
+    { label: 'About Us', href: '#' },
+    { label: 'Careers', href: '#' },
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+  ],
+};
+---
+
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="inline-flex items-center gap-2 text-xl font-bold text-white mb-4">
+          <span class="text-2xl">🛒</span>
+          FastShop
+        </a>
+        <p class="text-sm text-slate-400 max-w-xs">
+          Simple, premium fashion for everyday comfort. Free delivery on orders over ৳১,০০০.
+        </p>
+      </div>
+      <!-- Links -->
+      {Object.entries(links).map(([heading, items]) => (
+        <div>
+          <h3 class="font-semibold text-white mb-4">{heading}</h3>
+          <ul class="space-y-3">
+            {items.map((item) => (
+              <li>
+                <a href={item.href} class="text-slate-400 hover:text-white transition-colors">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© {new Date().getFullYear()} FastShop. All rights reserved.</p>
+      <div class="flex gap-6 text-slate-500">
+        <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>

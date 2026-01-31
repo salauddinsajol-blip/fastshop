@@ -1,0 +1,42 @@
+---
+const features = [
+  {
+    title: 'Free Delivery',
+    description: 'On all orders over ৳১,০০০ across Bangladesh.',
+    icon: '🚚',
+  },
+  {
+    title: 'Easy Returns',
+    description: '14-day hassle-free return and exchange policy.',
+    icon: '↩️',
+  },
+  {
+    title: 'Secure Payment',
+    description: '100% secure payment with SSL encryption.',
+    icon: '🔒',
+  },
+  {
+    title: 'Quality Assured',
+    description: 'Premium fabrics and careful stitching.',
+    icon: '✨',
+  },
+];
+---
+
+<section id="features" class="py-16 md:py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Why Shop With Us</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">We make online shopping simple and trustworthy.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {features.map((feature) => (
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-md hover:border-emerald-100 transition-all">
+          <div class="text-3xl mb-4" aria-hidden="true">{feature.icon}</div>
+          <h3 class="text-lg font-semibold text-slate-800 mb-2">{feature.title}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
