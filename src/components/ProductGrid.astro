@@ -2,20 +2,20 @@
 import ProductCard from './ProductCard.astro';
 
 const products = [
-  { name: 'Premium Cotton T-Shirt', price: 550, image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop', badge: 'Best Seller' },
-  { name: 'Casual Polo Shirt', price: 750, image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop' },
-  { name: 'Drop Shoulder Tee', price: 650, image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop' },
-  { name: 'Full Sleeve Basic', price: 700, image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop' },
-  { name: 'Oversized Hoodie', price: 1200, image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop', badge: 'New' },
-  { name: 'Slim Fit Chinos', price: 950, image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop' },
+  { name: 'Pocket Tripod Stand', price: 29, image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop', badge: 'Starter' },
+  { name: 'Clip-on Lavalier Mic', price: 39, image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=400&fit=crop' },
+  { name: 'Compact Ring Light', price: 49, image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop', badge: 'Best for Lighting' },
+  { name: '3-Axis Phone Gimbal', price: 89, image: 'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=400&h=400&fit=crop' },
+  { name: 'High-Capacity Power Bank', price: 45, image: 'https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=400&h=400&fit=crop' },
+  { name: 'Portable Wi-Fi Hotspot', price: 79, image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop', badge: 'Go Live Anywhere' },
 ];
 ---
 
-<section id="products" class="py-16 md:py-24 bg-white">
+<section id="gear" class="py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Featured Products</h2>
-      <p class="text-slate-600 max-w-2xl mx-auto">Handpicked quality pieces for your everyday wardrobe.</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Recommended Mobile Live Gear</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">Affordable essentials to stabilize video, improve audio, and keep you live longer.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {products.map((product) => (

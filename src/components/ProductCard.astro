@@ -29,7 +29,7 @@ const id = propId ?? `${name.replace(/\s+/g, '-').toLowerCase()}-${price}`;
   </div>
   <div class="p-5">
     <h3 class="font-semibold text-slate-800 mb-1 transition-colors duration-300 group-hover:text-emerald-600">{name}</h3>
-    <p class="text-emerald-600 font-bold text-lg mb-4 transition-transform duration-300 group-hover:scale-105 inline-block">৳{price}</p>
+    <p class="text-emerald-600 font-bold text-lg mb-4 transition-transform duration-300 group-hover:scale-105 inline-block">${price}</p>
     <button
       type="button"
       class="add-to-cart-btn w-full py-3 rounded-xl bg-slate-100 text-slate-700 font-medium transition-all duration-300 ease-out hover:bg-emerald-500 hover:text-white hover:scale-[1.02] hover:shadow-lg hover:shadow-emerald-500/25 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-[1.02] group-hover:shadow-lg group-hover:shadow-emerald-500/25"
@@ -38,7 +38,7 @@ const id = propId ?? `${name.replace(/\s+/g, '-').toLowerCase()}-${price}`;
       data-product-price={price}
       data-product-image={image}
     >
-      Add to Cart
+      Add to Kit
     </button>
   </div>
 </article>
