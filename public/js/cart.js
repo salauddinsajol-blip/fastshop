@@ -98,7 +98,7 @@
           '<img src="' + (item.image || '') + '" alt="" class="w-16 h-16 object-cover rounded-lg flex-shrink-0" />' +
           '<div class="flex-1 min-w-0">' +
             '<h3 class="font-semibold text-slate-800 text-sm truncate">' + item.name + '</h3>' +
-            '<p class="text-emerald-600 font-bold text-sm">৳' + item.price + '</p>' +
+            '<p class="text-amber-600 font-bold text-sm">৳' + item.price + '</p>' +
             '<div class="flex items-center gap-2 mt-1">' +
               '<button type="button" class="cart-qty-minus w-7 h-7 rounded border border-slate-200 text-slate-600 hover:bg-slate-100 font-medium text-sm" data-id="' + item.id + '" aria-label="Decrease">−</button>' +
               '<span class="cart-qty-value w-6 text-center text-sm font-medium">' + item.quantity + '</span>' +
@@ -132,7 +132,7 @@
     if (!container) return;
     const cart = getCart();
     if (cart.length === 0) {
-      container.innerHTML = '<p class="text-slate-500 text-center py-12">Your cart is empty. <a href="/" class="text-emerald-600 font-medium hover:underline">Continue shopping</a></p>';
+      container.innerHTML = '<p class="text-slate-500 text-center py-12">Your cart is empty. <a href="/" class="text-amber-600 font-medium hover:underline">Continue shopping</a></p>';
       return;
     }
     const total = getSubtotal();
@@ -143,7 +143,7 @@
             '<img src="' + (item.image || '') + '" alt="' + item.name + '" class="w-20 h-20 object-cover rounded-lg" />' +
             '<div class="flex-1 min-w-0">' +
               '<h3 class="font-semibold text-slate-800">' + item.name + '</h3>' +
-              '<p class="text-emerald-600 font-bold">৳' + item.price + ' × ' + item.quantity + '</p>' +
+              '<p class="text-amber-600 font-bold">৳' + item.price + ' × ' + item.quantity + '</p>' +
             '</div>' +
             '<button type="button" class="remove-from-cart self-center px-4 py-2 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 font-medium transition-colors" data-id="' + item.id + '">Remove</button>' +
           '</div>'
