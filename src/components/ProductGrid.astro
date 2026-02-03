@@ -2,20 +2,20 @@
 import ProductCard from './ProductCard.astro';
 
 const products = [
-  { name: 'Premium Cotton T-Shirt', price: 550, image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop', badge: 'Best Seller' },
-  { name: 'Casual Polo Shirt', price: 750, image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop' },
-  { name: 'Drop Shoulder Tee', price: 650, image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop' },
-  { name: 'Full Sleeve Basic', price: 700, image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop' },
-  { name: 'Oversized Hoodie', price: 1200, image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop', badge: 'New' },
-  { name: 'Slim Fit Chinos', price: 950, image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop' },
+  { name: 'Signature Supima Tee', price: 1250, image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop', badge: 'Premium' },
+  { name: 'Italian Cotton Polo', price: 1750, image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop', badge: 'Limited' },
+  { name: 'Merino Crew Neck', price: 1950, image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop', badge: 'Premium' },
+  { name: 'Cashmere Blend Hoodie', price: 3200, image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop', badge: 'Premium' },
+  { name: 'Tailored Chinos', price: 2100, image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop', badge: 'New' },
+  { name: 'Structured Overshirt', price: 2600, image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop', badge: 'Premium' },
 ];
 ---
 
 <section id="products" class="py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Featured Products</h2>
-      <p class="text-slate-600 max-w-2xl mx-auto">Handpicked quality pieces for your everyday wardrobe.</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Premium Picks</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">Curated essentials from our premium line with member pricing.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {products.map((product) => (
